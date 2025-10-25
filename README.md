@@ -61,29 +61,15 @@ This automation eliminates manual intervention by:
 
 ## 🏗️ Architecture
 
-┌─────────────────────────────────────────┐
-│           AWS Cloud                     │
-│                                         │
-│  ┌──────────┐      ┌──────────┐        │
-│  │EventBridge  →  │  Lambda   │        │
-│  │ (Timer)   │    │(Python)   │        │
-│  └──────────┘      └─────┬────┘        │
-│                          ↓              │
-│                   ┌──────────┐          │
-│                   │ Secrets  │          │
-│                   │ Manager  │          │
-│                   └──────────┘          │
-└─────────────────────┬───────────────────┘
-                      │ HTTPS
-              ┌───────▼────────┐
-              │ Jira Cloud API │
-              │ (REST API v3)  │
-              └───────┬────────┘
-                      │
-              ┌───────▼────────┐
-              │ Jira Service   │
-              │   Management   │
-              └────────────────┘
+1. ⏰ EventBridge Timer (triggers every 5 minutes)
+          ↓
+2. 🚀 Lambda Function (Python 3.11)
+          ↓
+3. 🔐 Secrets Manager (fetches Jira credentials)
+          ↓
+4. 🌐 Jira REST API (via HTTPS)
+          ↓
+5. 🎫 Jira Service Management (updates tickets)
 
 
 ### Component Breakdown
