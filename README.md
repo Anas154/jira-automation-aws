@@ -86,6 +86,7 @@ This automation eliminates manual intervention by:
               └────────────────┘
 
 
+
 ### Component Breakdown
 
 | Component | Purpose | Technology |
