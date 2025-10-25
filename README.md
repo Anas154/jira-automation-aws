@@ -61,6 +61,31 @@ This automation eliminates manual intervention by:
 
 ## 🏗️ Architecture
 
+┌─────────────────────────────────────────┐
+│           AWS Cloud                     │
+│                                         │
+│  ┌──────────┐      ┌──────────┐        │
+│  │EventBridge  →  │  Lambda   │        │
+│  │ (Timer)   │    │(Python)   │        │
+│  └──────────┘      └─────┬────┘        │
+│                          ↓              │
+│                   ┌──────────┐          │
+│                   │ Secrets  │          │
+│                   │ Manager  │          │
+│                   └──────────┘          │
+└─────────────────────┬───────────────────┘
+                      │ HTTPS
+              ┌───────▼────────┐
+              │ Jira Cloud API │
+              │ (REST API v3)  │
+              └───────┬────────┘
+                      │
+              ┌───────▼────────┐
+              │ Jira Service   │
+              │   Management   │
+              └────────────────┘
+
+
 ### Component Breakdown
 
 | Component | Purpose | Technology |
