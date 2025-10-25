@@ -1,0 +1,8 @@
+# Rename this file to terraform.tfvars and fill in your values
+# DO NOT commit terraform.tfvars to Git
+
+jira_base        = "https://YOUR-DOMAIN.atlassian.net"
+jira_login       = "your-email@example.com"
+jira_api_token   = "YOUR_JIRA_API_TOKEN_HERE"
+jira_account_id  = "YOUR_ACCOUNT_ID_HERE"
+aws_region       = "us-east-1"

@@ -1,0 +1,39 @@
+# Environment
+.env
+*.env
+!.env.example
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+
+# Lambda
+lambda_function.zip
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+# Terraform
+*.tfvars
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.backup
+
+# Secrets
+*.env
+.env
+secrets/
+
+# Lambda
+lambda_function.zip
+lambda/__pycache__/
