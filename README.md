@@ -89,6 +89,18 @@ This automation eliminates manual intervention by:
 │ Jira Service │
 │ Management │
 └────────────────┘
+│
+│ HTTPS
+│
+┌───────▼────────┐
+│ Jira Cloud API │
+│ (REST API v3) │
+└────────────────┘
+│
+┌───────▼────────┐
+│ Jira Service │
+│ Management │
+└────────────────┘
 
 text
 
